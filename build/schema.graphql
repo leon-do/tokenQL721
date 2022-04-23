@@ -1,0 +1,25 @@
+type TokenEntity @entity {
+  id: ID!
+  contract: Bytes!
+  tokenId: BigInt
+  owner: Bytes
+  name: String
+  symbol: String
+  tokenURI: String
+}
+
+type ApprovalEntity @entity {
+  id: ID!
+  contract: Bytes!
+  tokenId: BigInt
+  owner: Bytes
+  approved: Bytes
+}
+
+type ApprovalForAllEntity @entity {
+  id: ID!
+  contract: Bytes!
+  owner: Bytes
+  operator: Bytes
+  approved: Boolean
+}
